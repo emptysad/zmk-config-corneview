@@ -36,10 +36,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6            &kp N7        &kp N8        &kp N9        &kp N0     &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp GREATER_THAN  &kp NUMBER_4  &kp NUMBER_5  &kp N6        &kp MINUS  &kp PLUS
-&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &kp LESS_THAN     &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL  &kp DOT
-                                        &kp LGUI      &trans        &kp SPACE       &kp RET           &trans        &kp N0
+&trans      &trans        &kp PAGE_DOWN  &kp UP        &kp PAGE_UP  &kp PRINTSCREEN    &kp CARET         &kp N7        &kp N8        &kp N9        &kp ASTRK  &kp DELETE
+&trans      &trans        &kp LEFT       &kp DOWN      &kp RIGHT    &trans             &kp GREATER_THAN  &kp NUMBER_4  &kp NUMBER_5  &kp N6        &kp MINUS  &kp PLUS
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &trans       &trans             &kp LESS_THAN     &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL  &kp DOT
+                                         &kp LGUI      &trans       &kp SPACE          &kp RET           &trans        &kp N0
             >;
         };
 
@@ -51,19 +51,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp MINUS
-&kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
+&kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LPAR  &kp RPAR  &kp MINUS
+&kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp LPAR          &kp RPAR           &kp RBKT  &kp BSLH  &kp GRAVE
+&kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp RBRC  &kp PIPE  &kp TILDE
+                             &kp LGUI  &trans    &kp SPACE    &kp RET    &trans            &kp RALT
             >;
         };
 
         layer_3 {
             bindings = <
-&trans  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE    &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp BACKSPACE
-&trans  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE    &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
-&trans  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I     &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &kp RU_CYRILLIC_HA   &trans
-                                                       &trans              &trans              &kp SPACE             &kp ENTER           &trans                     &trans
+&kp LGUI   &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE    &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp BACKSPACE
+&kp LSHFT  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE    &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
+&kp LCTRL  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I     &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &kp RU_CYRILLIC_HA   &trans
+                                                          &kp LEFT_ALT        &mo 1               &kp SPACE             &kp ENTER           &mo 2                      &kp RIGHT_ALT
             >;
         };
     };
