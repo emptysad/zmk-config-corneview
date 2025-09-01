@@ -7,9 +7,26 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 #include "keys_ru.h"
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        lang {
+            bindings = <&tog 3>;
+            key-positions = <37 40>;
+            layers = <0>;
+        };
+
+        lang_en {
+            bindings = <&tog 0>;
+            key-positions = <37 40>;
+            layers = <3>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -51,10 +68,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LPAR  &kp RPAR  &kp MINUS
-&kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp LPAR          &kp RPAR           &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp LGUI  &trans    &kp SPACE    &kp RET    &trans            &kp RALT
+&trans  &trans  &trans          &mmv MOVE_UP    &mkp RCLK        &msc SCRL_UP      &kp CARET  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LPAR  &kp RPAR  &kp MINUS
+&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN    &kp MINUS  &kp LPAR          &kp RPAR           &kp NUBS  &kp BSLH  &kp GRAVE
+&trans  &trans  &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT  &trans            &kp UNDER  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp PIPE  &kp PIPE  &kp TILDE
+                                &kp LGUI        &trans           &mkp LCLK         &kp RET    &trans            &kp RALT
             >;
         };
 
