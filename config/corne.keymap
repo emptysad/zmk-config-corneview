@@ -80,10 +80,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE   &kp LA(TAB)  &kp PAGE_DOWN  &kp UP        &kp PAGE_UP   &kp HOME      &kp CARET         &kp N7        &kp N8        &kp N9        &kp FSLH   &kp DELETE
-&kp LSHIFT  &kp LC(TAB)  &kp LEFT       &kp DOWN      &kp RIGHT     &kp END       &kp GREATER_THAN  &kp NUMBER_4  &kp NUMBER_5  &kp N6        &kp MINUS  &kp PLUS
-&kp LCTRL   &kp LGUI     &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 0  &bt BT_CLR    &kp LESS_THAN     &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp ASTRK  &kp EQUAL
-                                        &kp LEFT_ALT  &trans        &kp SPACE     &kp RET           &kp DOT       &kp N0
+&kp GRAVE   &kp TAB   &kp PAGE_DOWN  &kp UP        &kp PAGE_UP   &kp HOME      &kp CARET         &kp N7        &kp N8        &kp N9        &kp FSLH   &kp DELETE
+&kp LSHIFT  &trans    &kp LEFT       &kp DOWN      &kp RIGHT     &kp END       &kp GREATER_THAN  &kp NUMBER_4  &kp NUMBER_5  &kp N6        &kp MINUS  &kp PLUS
+&kp LCTRL   &kp LGUI  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 0  &bt BT_CLR    &kp LESS_THAN     &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp ASTRK  &kp EQUAL
+                                     &kp LEFT_ALT  &trans        &kp SPACE     &kp RET           &kp DOT       &kp N0
             >;
         };
 
