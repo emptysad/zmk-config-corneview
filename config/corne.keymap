@@ -11,21 +11,7 @@
 #include "keys_ru.h"
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        lang {
-            bindings = <&tog 3>;
-            key-positions = <37 40>;
-            layers = <0>;
-        };
-
-        lang_en {
-            bindings = <&tog 0>;
-            key-positions = <37 40>;
-            layers = <3>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
