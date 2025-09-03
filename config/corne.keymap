@@ -9,6 +9,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include "keys_ru.h"
 
+&lt { tapping-term-ms = <30>; };
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -21,7 +23,7 @@
 
         right-bracket {
             bindings = <&kp RPAR>;
-            key-positions = <19 20>;
+            key-positions = <19 18>;
             layers = <0>;
         };
 
@@ -77,7 +79,7 @@
 
         esc {
             bindings = <&kp ESC>;
-            key-positions = <38 39>;
+            key-positions = <19 20>;
         };
     };
 
