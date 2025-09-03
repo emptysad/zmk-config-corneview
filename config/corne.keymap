@@ -27,29 +27,29 @@
 
         left-curve {
             bindings = <&kp LEFT_BRACE>;
-            key-positions = <28 27>;
+            key-positions = <4 3>;
             layers = <0>;
         };
 
         right-curve {
             bindings = <&kp RIGHT_BRACE>;
-            key-positions = <31 32>;
+            key-positions = <7 8>;
         };
 
         left-square {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <4 3>;
+            key-positions = <28 27>;
             layers = <0>;
         };
 
         right-square {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <7 8>;
+            key-positions = <31 32>;
         };
 
         dqt {
             bindings = <&kp DQT>;
-            key-positions = <14 13>;
+            key-positions = <22 23>;
             layers = <0>;
         };
 
@@ -61,13 +61,23 @@
 
         equal {
             bindings = <&kp EQUAL>;
-            key-positions = <22 23>;
+            key-positions = <9 10>;
             layers = <0>;
         };
 
         russian-ha {
             bindings = <&kp RU_CYRILLIC_HA>;
             key-positions = <10 11>;
+        };
+
+        caps {
+            bindings = <&kp CLCK>;
+            key-positions = <40 37>;
+        };
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <38 39>;
         };
     };
 
@@ -82,10 +92,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB         &kp Q    &kp W  &kp E         &kp R           &kp T        &kp Y      &kp U      &kp I      &kp O    &kp P     &kp BSPC
-&kp LCTRL       &lt 3 A  &kp S  &kp D         &kp F           &kp G        &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LEFT_SHIFT  &kp Z    &kp X  &kp C         &kp V           &kp B        &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                                &kp LEFT_ALT  &lt 1 CAPSLOCK  &kp SPACE    &kp ENTER  &lt 2 ESC  &kp LWIN
+&kp TAB         &kp Q    &kp W  &kp E         &kp R  &kp T        &kp Y      &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&kp LCTRL       &lt 3 A  &kp S  &kp D         &kp F  &kp G        &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LEFT_SHIFT  &kp Z    &kp X  &kp C         &kp V  &kp B        &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                                &kp LEFT_ALT  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &kp LWIN
             >;
         };
 
