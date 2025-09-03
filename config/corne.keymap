@@ -81,6 +81,26 @@
             bindings = <&kp ESC>;
             key-positions = <19 20>;
         };
+
+        up {
+            bindings = <&kp UP>;
+            key-positions = <13 20>;
+        };
+
+        down {
+            bindings = <&kp DOWN_ARROW>;
+            key-positions = <13 19>;
+        };
+
+        left {
+            bindings = <&kp LEFT_ARROW>;
+            key-positions = <13 18>;
+        };
+
+        right {
+            bindings = <&kp RIGHT_ARROW>;
+            key-positions = <13 21>;
+        };
     };
 
     keymap {
