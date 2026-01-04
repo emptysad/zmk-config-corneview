@@ -95,6 +95,16 @@
             bindings = <&kp RIGHT_ARROW>;
             key-positions = <13 21>;
         };
+
+        TriangleOpen {
+            bindings = <&kp LESS_THAN>;
+            key-positions = <28 29>;
+        };
+
+        TriangleClose {
+            bindings = <&kp GREATER_THAN>;
+            key-positions = <30 31>;
+        };
     };
 
     keymap {
@@ -110,7 +120,7 @@
             bindings = <
 &kp TAB              &kp Q    &kp W  &kp E         &kp R  &kp T        &kp Y      &kp U  &kp I      &kp O    &kp P     &kp BSPC
 &mt LEFT_SHIFT CLCK  &lt 3 A  &kp S  &kp D         &kp F  &kp G        &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL            &kp Z    &kp X  &kp C         &kp V  &kp B        &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+&kp LCTRL            &kp Z    &kp X  &kp C         &kp V  &kp B        &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp GLOBE
                                      &kp LEFT_ALT  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &kp LWIN
             >;
         };
@@ -125,7 +135,7 @@
             bindings = <
 &kp GRAVE  &trans    &mkp RCLK       &mmv MOVE_UP    &mkp LCLK        &msc SCRL_UP      &kp CARET         &kp N7        &kp N8        &kp N9        &kp FSLH   &kp DELETE
 &trans     &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN    &kp GREATER_THAN  &kp NUMBER_4  &kp NUMBER_5  &kp N6        &kp MINUS  &kp PLUS
-&trans     &kp LGUI  &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 0     &bt BT_CLR        &kp LESS_THAN     &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp ASTRK  &kp EQUAL
+&trans     &kp LGUI  &bt BT_SEL 2    &bt BT_SEL 1    &bt BT_SEL 0     &bt BT_CLR        &kp LESS_THAN     &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp ASTRK  &kp EQUAL
                                      &trans          &trans           &trans            &kp RIGHT_ALT     &kp DOT       &kp N0
             >;
         };
