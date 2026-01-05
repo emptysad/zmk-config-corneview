@@ -143,7 +143,12 @@
         tap_sl_up: tap_sl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&mmv MOVE_UP &sl 5>;
+            bindings =
+                <&macro_press>,
+                <&mmv MOVE_UP>,
+                <&macro_pause_for_release>,
+                <&sl 5>,
+                <&macro_release>;
 
             label = "TAP_SL";
         };
@@ -151,7 +156,12 @@
         tap_sl_down: tap_down_sl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&mmv MOVE_DOWN &sl 5>;
+            bindings =
+                <&macro_press>,
+                <&mmv MOVE_DOWN>,
+                <&macro_pause_for_release>,
+                <&sl 5>,
+                <&macro_release>;
 
             label = "TAP_DOWN_SL";
         };
@@ -162,8 +172,9 @@
             bindings =
                 <&macro_press>,
                 <&mmv MOVE_LEFT>,
-                <&macro_release>,
-                <&sl 5>;
+                <&macro_pause_for_release>,
+                <&sl 5>,
+                <&macro_release>;
 
             label = "TAP_SL_LEFT";
         };
@@ -174,8 +185,9 @@
             bindings =
                 <&macro_press>,
                 <&mmv MOVE_RIGHT>,
-                <&macro_release>,
-                <&sl 5>;
+                <&macro_pause_for_release>,
+                <&sl 5>,
+                <&macro_release>;
 
             label = "TAP_SL_RIGHT";
         };
@@ -251,8 +263,8 @@
             bindings = <
 &trans  &trans  &trans              &mmv MOVE_Y(-1600)  &trans             &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &mmv MOVE_X(-1600)  &mmv MOVE_Y(1600)   &mmv MOVE_X(1600)  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans              &trans             &trans             &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                                    &trans             &trans             &trans    &trans  &trans  &trans
+&trans  &trans  &trans              &trans              &trans             &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                    &trans              &trans             &trans    &trans  &trans  &trans
             >;
         };
     };
