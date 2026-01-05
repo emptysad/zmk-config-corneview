@@ -112,28 +112,28 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DBL_MOVE_UP";
             #binding-cells = <0>;
-            bindings = <&mmv MOVE_UP>, <&mmv MOVE_Y(-600)>;
+            bindings = <&mmv MOVE_UP>, <&mmv MOVE_Y(-1600)>;
         };
 
         dbl_move_down: dbl_move_down {
             compatible = "zmk,behavior-tap-dance";
             label = "DBL_MOVE_DOWN";
             #binding-cells = <0>;
-            bindings = <&mmv MOVE_DOWN>, <&mmv MOVE_Y(600)>;
+            bindings = <&mmv MOVE_DOWN>, <&mmv MOVE_Y(1600)>;
         };
 
         dbl_move_left: dbl_move_left {
             compatible = "zmk,behavior-tap-dance";
             label = "DBL_MOVE_LEFT";
             #binding-cells = <0>;
-            bindings = <&mmv MOVE_LEFT>, <&mmv MOVE_X(-600)>;
+            bindings = <&mmv MOVE_LEFT>, <&mmv MOVE_X(-1600)>;
         };
 
         dbl_move_right: dbl_move_right {
             compatible = "zmk,behavior-tap-dance";
             label = "DBL_MOVE_RIGHT";
             #binding-cells = <0>;
-            bindings = <&mmv MOVE_RIGHT>, <&mmv MOVE_X(600)>;
+            bindings = <&mmv MOVE_RIGHT>, <&mmv MOVE_X(1600)>;
         };
     };
 
