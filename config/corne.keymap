@@ -10,6 +10,8 @@
 #include <dt-bindings/zmk/pointing.h>
 #include "keys_ru.h"
 
+&sl { release-after-ms = <200>; };
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -137,6 +139,36 @@
         };
     };
 
+    macros {
+        tap_sl_up: tap_sl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mmv MOVE_UP &sl 5>;
+            label = "TAP_SL";
+        };
+
+        tap_sl_down: tap_down_sl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mmv MOVE_DOWN &sl 5>;
+            label = "TAP_DOWN_SL";
+        };
+
+        tap_sl_left: tap_sl_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mmv MOVE_LEFT &sl 5>;
+            label = "TAP_SL_LEFT";
+        };
+
+        tap_sl_right: tap_sl_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mmv MOVE_RIGHT &sl 5>;
+            label = "TAP_SL_RIGHT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -163,10 +195,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE  &trans  &mkp RCLK       &dbl_move_up    &mkp LCLK        &msc SCRL_UP      &kp CARET         &kp N7        &kp N8        &kp N9        &kp ASTRK  &kp MINUS
-&trans     &trans  &dbl_move_left  &dbl_move_down  &dbl_move_right  &msc SCRL_DOWN    &kp GREATER_THAN  &kp NUMBER_4  &kp NUMBER_5  &kp N6        &kp SLASH  &kp PLUS
-&trans     &trans  &bt BT_SEL 2    &bt BT_SEL 1    &bt BT_SEL 0     &trans            &kp LESS_THAN     &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp DOT    &kp EQUAL
-                                   &trans          &trans           &trans            &kp SPACE         &kp NUMBER_0  &none
+&kp GRAVE  &trans  &mkp RCLK     &tap_sl_up    &mkp LCLK      &msc SCRL_UP      &kp CARET         &kp N7        &kp N8        &kp N9        &kp ASTRK  &kp MINUS
+&trans     &trans  &tap_sl_left  &tap_sl_down  &tap_sl_right  &msc SCRL_DOWN    &kp GREATER_THAN  &kp NUMBER_4  &kp NUMBER_5  &kp N6        &kp SLASH  &kp PLUS
+&trans     &trans  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0   &trans            &kp LESS_THAN     &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp DOT    &kp EQUAL
+                                 &trans        &trans         &trans            &kp SPACE         &kp NUMBER_0  &none
             >;
         };
 
@@ -200,6 +232,15 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT   &kp DOWN  &kp UP   &kp RIGHT      &kp PRINTSCREEN  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans    &trans   &trans         &trans           &trans
                         &trans  &trans  &trans    &trans     &trans    &trans
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans             &mmv MOVE_X(-600)  &trans            &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &mmv MOVE_X(-600)  &mmv MOVE_X(600)   &mmv MOVE_X(600)  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans             &trans             &trans            &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                   &trans             &trans            &trans    &trans  &trans  &trans
             >;
         };
     };
