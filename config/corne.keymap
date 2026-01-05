@@ -143,28 +143,40 @@
         tap_sl_up: tap_sl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mmv MOVE_UP &sl 5>;
+            bindings = <&macro_press>, <&mmv MOVE_UP &sl 5>;
+
             label = "TAP_SL";
         };
 
         tap_sl_down: tap_down_sl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mmv MOVE_DOWN &sl 5>;
+            bindings = <&macro_press>, <&mmv MOVE_DOWN &sl 5>;
+
             label = "TAP_DOWN_SL";
         };
 
         tap_sl_left: tap_sl_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mmv MOVE_LEFT &sl 5>;
+            bindings =
+                <&macro_press>,
+                <&mmv MOVE_LEFT>,
+                <&macro_release>,
+                <&sl 5>;
+
             label = "TAP_SL_LEFT";
         };
 
         tap_sl_right: tap_sl_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mmv MOVE_RIGHT &sl 5>;
+            bindings =
+                <&macro_press>,
+                <&mmv MOVE_RIGHT>,
+                <&macro_release>,
+                <&sl 5>;
+
             label = "TAP_SL_RIGHT";
         };
     };
@@ -237,10 +249,10 @@
 
         layer_5 {
             bindings = <
-&trans  &trans  &trans             &mmv MOVE_X(-1600)  &trans            &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &mmv MOVE_X(-1600)  &mmv MOVE_X(1600)   &mmv MOVE_X(1600)  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans             &trans             &trans            &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                                   &trans             &trans            &trans    &trans  &trans  &trans
+&trans  &trans  &trans              &mmv MOVE_Y(-600)  &trans             &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &mmv MOVE_X(-1600)  &mmv MOVE_Y(600)   &mmv MOVE_X(1600)  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans              &trans             &trans             &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                    &trans             &trans             &trans    &trans  &trans  &trans
             >;
         };
     };
