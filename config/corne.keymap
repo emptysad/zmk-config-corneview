@@ -107,6 +107,19 @@
         };
     };
 
+    behaviors {
+        dbl_hold: dbl_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "DBL_HOLD";
+            bindings = <&mmv>, <&mmv>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            flavor = "tap-preferred";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -142,9 +155,9 @@
 
         fast-mouse {
             bindings = <
-&trans  &trans  &trans              &mmv MOVE_Y(-2000)  &trans             &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &mmv MOVE_X(-2000)  &mmv MOVE_Y(2000)   &mmv MOVE_X(2000)  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans              &trans              &trans             &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans              &mmv MOVE_Y(-2000)  &trans             &trans    &trans  &trans  &dbl_hold MOVE_X(100) MOVE_X(600)  &trans  &trans  &trans
+&trans  &trans  &mmv MOVE_X(-2000)  &mmv MOVE_Y(2000)   &mmv MOVE_X(2000)  &trans    &trans  &trans  &trans                             &trans  &trans  &trans
+&trans  &trans  &trans              &trans              &trans             &trans    &trans  &trans  &trans                             &trans  &trans  &trans
                                     &trans              &trans             &trans    &trans  &trans  &trans
             >;
         };
