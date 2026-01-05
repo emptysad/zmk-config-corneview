@@ -121,7 +121,7 @@
 &mt CAPS TAB         &kp Q    &kp W  &kp E         &kp R     &kp T          &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
 &mt LEFT_SHIFT CLCK  &lt 5 A  &kp S  &kp D         &kp F     &kp G          &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LCTRL            &kp Z    &kp X  &kp C         &kp V     &kp B          &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                                     &kp LEFT_ALT  &kp LCMD  &lt 1 SPACE    &lt 4 ENTER  &mo 4  &kp RCTRL
+                                     &kp LEFT_ALT  &kp LCMD  &lt 1 SPACE    &lt 3 ENTER  &mo 4  &kp RCTRL
             >;
         };
 
@@ -142,10 +142,10 @@
 
         fast-mouse {
             bindings = <
-&trans  &trans  &trans             &mmv MOVE_Y(-2000)  &trans            &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans              &mmv MOVE_Y(-2000)  &trans             &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &mmv MOVE_X(-2000)  &mmv MOVE_Y(2000)   &mmv MOVE_X(2000)  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans             &trans             &trans            &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                                   &trans             &trans            &trans    &trans  &trans  &trans
+&trans  &trans  &trans              &trans              &trans             &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                    &trans              &trans             &trans    &trans  &trans  &trans
             >;
         };
 
