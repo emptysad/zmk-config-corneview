@@ -10,8 +10,6 @@
 #include <dt-bindings/zmk/pointing.h>
 #include "keys_ru.h"
 
-&lt { flavor = "hold-preferred"; };
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -150,10 +148,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&mt CAPS TAB         &kp Q    &kp W  &kp E         &kp R     &kp T          &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&mt LEFT_SHIFT CLCK  &lt 5 A  &kp S  &kp D         &kp F     &kp G          &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL            &kp Z    &kp X  &kp C         &kp V     &kp B          &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                                     &kp LEFT_ALT  &kp LCMD  &lt 1 SPACE    &lt 3 ENTER  &mo 4  &kp RCTRL
+&mt CAPS TAB         &kp Q    &kp W  &kp E         &kp R  &kp T                     &kp Y                    &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&mt LEFT_SHIFT CLCK  &lt 4 A  &kp S  &kp D         &kp F  &kp G                     &kp H                    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL            &kp Z    &kp X  &kp C         &kp V  &kp B                     &kp N                    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                                     &kp LEFT_ALT  &mo 1  &mt LEFT_COMMAND SPACE    &mt RIGHT_CONTROL ENTER  &mo 2  &mo 3
             >;
         };
 
@@ -165,19 +163,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE  &trans  &mkp RCLK       &mmv MOVE_UP    &mkp LCLK        &msc SCRL_UP      &kp CARET         &kp N7        &kp N8        &kp N9        &kp ASTRK  &kp MINUS
-&trans     &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN    &kp GREATER_THAN  &kp NUMBER_4  &kp NUMBER_5  &kp N6        &kp SLASH  &kp PLUS
+&kp GRAVE  &trans  &mkp RCLK       &dbl_move_up    &mkp LCLK        &msc SCRL_UP      &kp CARET         &kp N7        &kp N8        &kp N9        &kp ASTRK  &kp MINUS
+&trans     &trans  &dbl_move_left  &dbl_move_down  &dbl_move_right  &msc SCRL_DOWN    &kp GREATER_THAN  &kp NUMBER_4  &kp NUMBER_5  &kp N6        &kp SLASH  &kp PLUS
 &trans     &trans  &bt BT_SEL 2    &bt BT_SEL 1    &bt BT_SEL 0     &trans            &kp LESS_THAN     &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp DOT    &kp EQUAL
-                                   &trans          &trans           &trans            &mo 2             &kp NUMBER_0  &none
-            >;
-        };
-
-        fast-mouse {
-            bindings = <
-&trans  &trans  &trans          &dbl_move_up    &trans           &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &dbl_move_left  &dbl_move_down  &dbl_move_right  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans          &trans          &trans           &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans          &trans           &trans    &trans  &trans  &trans
+                                   &trans          &trans           &trans            &kp SPACE         &kp NUMBER_0  &none
             >;
         };
 
