@@ -147,8 +147,9 @@
                 <&macro_press>,
                 <&mmv MOVE_UP>,
                 <&macro_pause_for_release>,
-                <&sl 5>,
-                <&macro_release>;
+                <&macro_release>,
+                <&macro_tap>,
+                <&sl 5>;
 
             label = "TAP_SL";
         };
@@ -160,8 +161,10 @@
                 <&macro_press>,
                 <&mmv MOVE_DOWN>,
                 <&macro_pause_for_release>,
-                <&sl 5>,
-                <&macro_release>;
+                <&macro_release>,
+                <&mmv MOVE_DOWN>,
+                <&macro_tap>,
+                <&sl 5>;
 
             label = "TAP_DOWN_SL";
         };
@@ -173,8 +176,9 @@
                 <&macro_press>,
                 <&mmv MOVE_LEFT>,
                 <&macro_pause_for_release>,
-                <&sl 5>,
-                <&macro_release>;
+                <&macro_release>,
+                <&macro_tap>,
+                <&sl 5>;
 
             label = "TAP_SL_LEFT";
         };
@@ -186,8 +190,9 @@
                 <&macro_press>,
                 <&mmv MOVE_RIGHT>,
                 <&macro_pause_for_release>,
-                <&sl 5>,
-                <&macro_release>;
+                <&macro_release>,
+                <&macro_tap>,
+                <&sl 5>;
 
             label = "TAP_SL_RIGHT";
         };
