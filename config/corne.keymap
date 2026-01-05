@@ -237,8 +237,8 @@
 
         layer_5 {
             bindings = <
-&trans  &trans  &trans             &mmv MOVE_X(-600)  &trans            &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &mmv MOVE_X(-600)  &mmv MOVE_X(600)   &mmv MOVE_X(600)  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans             &mmv MOVE_X(-1600)  &trans            &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &mmv MOVE_X(-1600)  &mmv MOVE_X(1600)   &mmv MOVE_X(1600)  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans             &trans             &trans            &trans    &trans  &trans  &trans  &trans  &trans  &trans
                                    &trans             &trans            &trans    &trans  &trans  &trans
             >;
