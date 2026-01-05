@@ -136,7 +136,7 @@
 &kp GRAVE  &trans  &mkp RCLK       &mmv MOVE_UP    &mkp LCLK        &msc SCRL_UP      &kp CARET         &kp N7        &kp N8        &kp N9        &kp ASTRK  &kp MINUS
 &trans     &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN    &kp GREATER_THAN  &kp NUMBER_4  &kp NUMBER_5  &kp N6        &kp SLASH  &kp PLUS
 &trans     &trans  &bt BT_SEL 2    &bt BT_SEL 1    &bt BT_SEL 0     &trans            &kp LESS_THAN     &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp DOT    &kp EQUAL
-                                   &trans          &trans           &trans            &trans            &kp NUMBER_0  &none
+                                   &trans          &trans           &trans            &mo 2             &kp NUMBER_0  &none
             >;
         };
 
