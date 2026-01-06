@@ -208,6 +208,12 @@
         };
     };
 
+&mmv_input_listener {
+    set_mouse_fast {
+        layers = <5>;
+        input-processors = <&zip_xy_scaler 3 1>;  // Умножает скорость на 2
+    };
+};
     keymap {
         compatible = "zmk,keymap";
 
@@ -276,8 +282,8 @@
 
         layer_5 {
             bindings = <
-&trans  &trans  &trans              &mmv MOVE_Y(-1600)  &trans             &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &mmv MOVE_X(-1600)  &mmv MOVE_Y(1600)   &mmv MOVE_X(1600)  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans              &mmv MOVE_UP  &trans             &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans              &trans              &trans             &trans    &trans  &trans  &trans  &trans  &trans  &trans
                                     &trans              &trans             &trans    &trans  &trans  &trans
             >;
