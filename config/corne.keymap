@@ -114,28 +114,28 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DBL_MOVE_UP";
             #binding-cells = <0>;
-            bindings = <&mmv MOVE_UP>, <&mmv MOVE_Y(-1600)>;
+            bindings = <&none>, <&mmv MOVE_Y(-1600)>;
         };
 
         dbl_move_down: dbl_move_down {
             compatible = "zmk,behavior-tap-dance";
             label = "DBL_MOVE_DOWN";
             #binding-cells = <0>;
-            bindings = <&mmv MOVE_DOWN>, <&mmv MOVE_Y(1600)>;
+            bindings = <&none>, <&mmv MOVE_Y(1600)>;
         };
 
         dbl_move_left: dbl_move_left {
             compatible = "zmk,behavior-tap-dance";
             label = "DBL_MOVE_LEFT";
             #binding-cells = <0>;
-            bindings = <&mmv MOVE_LEFT>, <&mmv MOVE_X(-1600)>;
+            bindings = <&none>, <&mmv MOVE_X(-1600)>;
         };
 
         dbl_move_right: dbl_move_right {
             compatible = "zmk,behavior-tap-dance";
             label = "DBL_MOVE_RIGHT";
             #binding-cells = <0>;
-            bindings = <&mmv MOVE_RIGHT>, <&mmv MOVE_X(1600)>;
+            bindings = <&none>, <&mmv MOVE_X(1600)>;
         };
     };
 
@@ -147,7 +147,7 @@
                 <&macro_press &mmv MOVE_UP>,
                 <&macro_pause_for_release>,
                 <&macro_release &mmv MOVE_UP>,
-                <&macro_tap &sl 5>;
+                <&macro_tap &dbl_move_up>;
 
             label = "TAP_SL";
         };
@@ -159,7 +159,7 @@
                 <&macro_press &mmv MOVE_DOWN>,
                 <&macro_pause_for_release>,
                 <&macro_release &mmv MOVE_DOWN>,
-                <&macro_tap &sl 5>;
+                <&macro_tap &dbl_move_down>;
 
             label = "TAP_DOWN_SL";
         };
@@ -171,7 +171,7 @@
                 <&macro_press &mmv MOVE_LEFT>,
                 <&macro_pause_for_release>,
                 <&macro_release &mmv MOVE_LEFT>,
-                <&macro_tap &sl 5>;
+                <&macro_tap &dbl_move_left>;
 
             label = "TAP_SL_LEFT";
         };
@@ -183,7 +183,7 @@
                 <&macro_press &mmv MOVE_RIGHT>,
                 <&macro_pause_for_release>,
                 <&macro_release &mmv MOVE_RIGHT>,
-                <&macro_tap &sl 5>;
+                <&macro_tap &dbl_move_right>;
 
             label = "TAP_SL_RIGHT";
         };
