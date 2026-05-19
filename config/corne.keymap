@@ -34,6 +34,7 @@
         input-processors = <&zip_xy_scaler 2 1>;  // Умножает скорость на 2
     };
 };
+
 &msc_input_listener {
     set_scroll_fast {
         layers = <5>;
@@ -178,7 +179,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "OPTION_CMD";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT>, <&kp LCMD>;
+            bindings = <&kp LCMD>, <&kp LEFT_ALT>;
         };
 
         caps_tab_caps: caps_tab_caps {
@@ -262,10 +263,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&mt LA(LC(LEFT_COMMAND)) TAB  &kp Q    &kp W  &kp E        &kp R             &kp T        &kp Y      &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&mt LEFT_SHIFT LC(SPACE)      &lt 4 A  &kp S  &kp D        &kp F             &kp G        &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL                     &kp Z    &kp X  &kp C        &kp V             &kp B        &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                                              &option_cmd  &dbl_layer_layer  &kp SPACE    &kp ENTER  &mo 2  &kp LCMD
+&mt LA(LC(LEFT_COMMAND)) TAB  &kp Q    &kp W  &kp E        &kp R             &kp T        &kp Y      &kp U  &kp I         &kp O    &kp P     &kp BSPC
+&mt LEFT_SHIFT LC(SPACE)      &lt 4 A  &kp S  &kp D        &kp F             &kp G        &kp H      &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
+&kp LCTRL                     &kp Z    &kp X  &kp C        &kp V             &kp B        &kp N      &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                                              &option_cmd  &dbl_layer_layer  &kp SPACE    &kp ENTER  &mo 2  &kp LEFT_ALT
             >;
         };
 
